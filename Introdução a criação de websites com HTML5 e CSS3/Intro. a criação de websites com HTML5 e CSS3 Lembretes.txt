@@ -1,0 +1,219 @@
+Aprendizado e lembretes - Introdução a criação de websites com HTML5 e CSS3
+
+https://drive.google.com/file/d/1KrKcQPJxXp9eF3QlqpXyNAvnKiVrB3NL/view?usp=sharing
+
+ESTRUTURA BÁSICA HTML
+
+<!DOCTYPE html> 
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+BOX MODEL: (espaços do conteudo)
+
+*Margin- espaçamentos entre elementos border-circulando o padding e o conteudo e é customizavel como largura e cor.
+
+*Padding- espaçamento entre a borda e o conteudo.
+*Content-é o que seu bloco reperesenta tipo um texto uma imagem ou um video. 
+
+LISTAS:
+existem as listas não ordenadas e as ordenada.
+*Uma lista ordenada é delimitada pelas etiquetas <ul> e </ul>  e terá numeros (Ordered List). Cada item da lista é delimitado pelas etiquetas <li> e </li> (List Item).
+
+*Uma lista  não ordenada é delimitada pelas etiquetas <ul> e </ul> . Cada item da lista é delimitado pelas etiquetas <li> e </li> (List Item). e essa terá bolinhas.
+
+
+CSS:
+
+Lembre-se:
+Ctrl+n (novo arquivo) coloca o titulo style.css na primeira linha e salva para ai começar a editar
+
+tudo que você quer mudar precisa de um id ou uma class, só pode ter um id na pagina mas pode ter varias class:
+ <h1 id="title">Guilherme Cunha</h1>
+<p class="post_content">
+
+depois de criar a class no codigo vc vai no style.css e coloca ponto , o nome da class e abre chave {
+
+
+mudar o tamanho do padding, superior e inferior iguais, e direito e esquerdo igual.
+ex.
+
+.post {
+padding: 10px 5px;
+}
+
+mudar o tamanho do padding sendo um pedida pra cada lado,o top é o primeiro numero, e os outros são em sentido horario.
+ex
+
+.post {
+padding: 15px 10px 5px 0;
+}
+
+ou
+.post {
+padding-top: 15px;
+padding-right: 10px;
+padding-bottom: 5px;
+padding-left: 0;
+}
+
+mudar o background
+
+.post {
+background: green;
+ou
+background-color: green;
+background-image: url("bg.png");
+background-position: top;
+}
+background-position é para arrumar a posição da foto.
+
+como muda a borda
+largura: pixels, centimetros, milimetros
+cor: blue , #000ff
+estilo: sólida, pontilhada(dotted), tracejada(dashed)...
+ex
+.post {
+border: 3px solid blue;
+border-top: 2px dotted green;
+border-right: 4px dashed pink
+
+no ex. acima ficaria a esquerda e a debaixo igual.
+
+pode se pudar assim tanbem
+.post {
+border-width: 3px;
+border-color: #505050;
+border-style: solid;
+
+mudar só um lado
+.post {
+border-top-width: 3px;
+border-top-color: blue;
+border-top-style: solid;
+}
+
+como arrendondar a borda
+todas iguais:
+
+border-radius: 10px;
+ou
+border-radius: 50%;(aqui vira um circulo)
+ 
+ou diferentes
+
+border-radius: 10% 20% 15% 22%
+tambem primeiro o top e segue horario
+
+COMO ALTERAR O TEXTO
+podemos usar qualquer fonte da web ou de nosso pc, mas uma boa escolha é usar uma fonte- safe, que é uma fonte que se encontra na maioria dos dispositivos,
+ex
+#title {
+font-family: Verdana;
+}
+
+.post_title {
+font-family: Verdana, Arial;
+}
+nesse segundo ex. caso não tenha a fonte verdana no dispositivo ele procurará a fonte arial
+
+para mudar o tamanho:
+
+#title {
+font-size: 30px;
+}
+
+para mudar o stilo:
+
+#title {
+font-style: italic;
+}
+italic é a fonte inclinada, poderia ser a normal; caso a fonte não tenha suporte para italico talvez não fico legal
+
+para mudar o peso do texto:
+
+#title {
+font-weight: bold;
+}
+existem algumas variaçoes em palavras, como normal,e o bold é o negrito,e é possivel usar numero também.
+
+*text-transform:
+
+esse deixa todo o texto em maiusculo
+
+#title {
+text-tranform: uppercase;
+}
+
+esse deixa todo o texto em minusculo
+
+.subtitle {
+text-transform: lowercase;
+}
+
+e esse deixa todas as primeiras letras maiusculo
+
+.post_title {
+text-transform: capitalize;
+}
+
+*text-decoration
+
+esse deixa uma linha abaixo do texto
+
+#title {
+text-decoration: underline;
+}
+
+esse deixa uma linha acima do texto
+.subtitle {
+text-decoration: overline;
+}
+
+esse deixa uma linha cortando o texto 
+.post_title {
+text-decoration: lene-through;
+}
+
+ESTILIZANDO LISTAS:
+
+como trocar em uma lista não ordenada a bolinha para um quadrado:
+ul {
+list-style-type: square;
+}
+
+como trocar em uma lista não ordenada a bolinha para ficar sem nada:
+ul {
+list-style-type: none;
+}
+como trocar em uma lista ordenada para numeros romanos:
+ol {
+list-style-type: upper-roman;
+}
+
+como mudar para um simbolo:
+ul {
+list-style-type: "\1F44D";
+}
+esse do ex é um joinha
+
+DIMENSÃO E ALINHAMENTO
+
+width =largura
+height= altura
+
+max-width= largura maxima
+max height=altura maxima
+
+margin auto para alinhar elementos automaticamente
+
+text align = para alinhar texto left ,right,center,justify
+
+
+como usar imagens como marcadores:
+ul {
+list-style-image: url("rocket.png");
+}

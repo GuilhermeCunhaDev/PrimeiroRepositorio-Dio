@@ -1,0 +1,108 @@
+Javascript Assíncrono
+
+syncronisidade - seria ir a escola quando tem uma ordem para tudo ser feito, e você foca em uma coisa por vez.
+
+assincronisidade -seria um curso online, onde você faz assim que da tempo, e pode focar em mais de uma coisa ao mesmo tempo.
+
+synchronous - seguem a fazer uma coisa até termanar e depois começa outra
+
+asynchronous - pode fazer mais de uma coisa simultaneamente
+
+PROMISE
+Promise é uma promessa, inicialmente, seu valor é desconhecido. Ela pode, então, ser resolvido ou rejeitada.
+Como comprar um ingresso para um show, você esta com o ingresso na mão, ele é a promessa que o show vai acontecer, mas pode ter um imprevisto e o show ser cancelado.
+
+Uma promise pode ter 3 estados
+1 - Pending  2- Fulfilled(completado)  3 - Rejected
+
+Como criar uma promise
+
+const myPromise = new Promise((resolve, reject) => {
+window.setTimeout(() => {
+resolve('Resolvida');*msg quando terminar*
+}, 2000);*quanto tempo vai demorar*
+});
+
+await myPromise *o que fará depois de ter o resultado*
+ .then((result) => result + ' passando pelo then')
+ .then((result) => result + ' e agora acabou!')
+.catch((err) => console.log(err.message));
+
+ASYNC/AWAIT
+O js funciona de forma síncrona, então usados a palavra async antes de function para mostrar que terá uma tarefa a ser feito meio que fora de ordem, e depois a palavra await para mostrar onde:
+ex
+async function resolvePromise() {
+const myPromise = new Promise((resolve, reject) => {
+window.setTimeout(() => {
+resolve('Resolvida');
+}, 3000);
+});
+
+const resolved = await myPromise 
+ .then((result) => result + ' passndo pelo then')
+ .then((result) => result + ' e agora acabou!')
+.catch((err) => console.log(err.message));
+
+return resolved;
+}
+
+Também posso usar o try/catch para pegar o erro:
+ex
+async function resolvePromise() {
+const myPromise = new Promise((resolve, reject) => {
+window.setTimeout(() => {
+resolve('Resolvida');
+}, 3000);
+});
+
+let result;
+
+try {
+ result = await myPromise 
+ .then((result) => result + ' passndo pelo then')
+ .then((result) => result + ' e agora acabou!')
+} catch(err) {
+result = err.message;
+}
+return result;
+}
+se eu chamar uma uma função sem o await, uma promise vai retornar outra promise:
+ex
+resolvePromise()
+//Promise {<pending>} *errado*
+---------------------------------------------
+await resolvePromise()
+// Resolvida passando pelo then e agora acabou!
+
+
+APIs
+São pontes para mostrar no front-end, dados que estão no back-end, e ao mesmo tempo sincronizar para vários dispositivos. Resumindo são meios de trazer dados de bancos de dados para o site.
+
+JSON: JavaScript Object Notation(notação de objeto em javascript)
+geralmente os dados chegam e são mandos em JSON, basicamente tem o formato de objeto mesmo, com aspas as chaves e os valores.
+
+Estrutura de fetch
+
+fetch(url, options)
+.then(response => respose.json())*sempre converte para json
+.then(json => console.log(json))
+
+lembrando que ele retorna uma promise e precisa utilizar o await
+exemplo de GET :
+
+fetch('https://endereco-api.com/',  {
+method: "GET",
+cache: "no-cache", *essas são as opções*
+})
+.then(response => respose.json())*sempre converte para json
+.then(json => console.log(json))
+
+POST é quando você manda dados para o banco de dados.
+
+fetch('https://endereco-api.com/',  {
+method: "POST",
+cache: "no-cache",
+body: JSON.stringify(data)*convertendo de json para string*
+})
+.then(response => respose.json())*sempre converte para json
+.then(json => console.log(json))

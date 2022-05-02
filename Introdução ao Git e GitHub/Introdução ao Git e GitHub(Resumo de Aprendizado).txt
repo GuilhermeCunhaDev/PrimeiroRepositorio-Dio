@@ -1,0 +1,59 @@
+Aprendizado - Introdução ao Git e GitHub
+Git é um programa que além de outras funcionalidades, permite o compartilhamento de projeto e códigos, podendo assim receber ajuda para melhor seus projetos, E seu grande funcionalidade é o controle de versão. Que permite uma enorme segurança. O Git cria um código único com 40 algoritmos que é único para seu projeto chamado sha1, caso você acresente uma virgula em seu projeto outro sha1 será criado, e se você retirar essa virgula ele dará o sha1 anterior também.
+Outro grande funcionalidade e que traz segurança é a escruta que ele cria, pois ele traz o autor do código, o parente (o sha1 da versão anterior), assim você sabe muito bem quem e o que foi mudado em cada versão.
+
+CONFLITOS DE MERGH
+
+Quando o código é mudado por alguém, e por você ao mesmo tempos, quando eu for dar um push irá aparecer um erro, eu devo fazer o pull (git pull origin master) arrumar no editor salvar e então seguir o passo a passo de commit (git add * + git commit - m "msg").
+
+README.MD
+
+ReadMe é um arquivo que será exibido em seu repositório, para o arquivo realmente ser ledo ele precisa ter esse nome, e estar no formato de MarlDown (colocar md no fim do arquivo), esse formato é uma espécie de html mais humanizado.Usar o editor Typero.
+
+COMANDO DO GITBASH
+
+Abrir o git bash em um lugar especifico - clique com o direito e abrir
+
+Git Bash aqui
+
+Listar pastas - ls
+
+Navegar para pasta) - cd+nome da pasta/
+
+Voltar pasta anterior - cd..
+
+Limpar tela - clear ou Ctrl+L
+
+Auto complete - tecla TAB
+
+Criar pasta - mkdir
+
+Apenas para o pc repitir - echo
+
+Ver comandos anteriores - tecla seta pra CIMA
+
+Criar arquivo - echo>(nomeArquivo.formato)(txt é exemplo)
+
+Mover arquivos para pasta - mv arquivo.formato ./pastadestino/
+
+Deletar - del (deleta tudo dentro da pasta mas a pasta não)
+
+Deletar pasta e arquivos - rm rf nome/
+
+Mostrar o caminho( ex. c/user/pasta) - pwd
+
+Exibir pastas ocutas - ls -a
+
+Configurar git (só no primeiro acesso) - git config -- global.user.email"email"
+
+iniciar o projeto - git init
+
+adicionar alteraçoes para stage - git add . ou git add -A
+
+criar um commit - git commit -m "msg"
+
+criar branch - git branch -M main ou master
+
+linkar repositório do git hub com a maquina - git remote add origin <link_para_o_seu_repositorio>
+
+atualizar a versão github - git push -u origin main

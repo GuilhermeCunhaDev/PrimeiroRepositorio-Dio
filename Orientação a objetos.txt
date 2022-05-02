@@ -1,0 +1,134 @@
+ORIENTAÇÃO A OBJECTOS
+
+A programação tem dois Paradigmas o
+
+Declarativo> como resolver os problemas
+
+Imperativo> o que você vai fazer
+
+Na orientação a objectos os programas são "objectos" que possuem uma série de propriedades.
+
+Seus pilares são:
+
+Herança> Quando "objecto filho" herda propriedades e métodos do "objecto pai", mas o filho também possui suas próprias propriedades
+
+Polimorfismo> é quando objectos se comportam diferentes quando invocados, mesmo eles possuindo a mesma classe pai.Encapsulamento> cada classe tem propriedades e métodos independentes do restante do código, posso alterar uma classe sem influência no resto do código
+
+Abstracção> é levar algo para o campo das ideias, e simplificar uma coisa complexa, generalizar assim simplificando a avaliação, classificação ou permitido a comunicação
+
+OOJS- Objecto orientados em Java script
+
+PROTÓTIPOS
+
+Protótipos todos os objectos Javascript herdam propriedades e métodos de um protótipo. O objecto Object.protptype esta no topo desta cadeia.
+Usando o _proto_: é possível ver as funções disponíveis.
+É como varias funções que você pode usar, mas se você pede uma destas funções e não é possível do console fazer, ele tentará fazer a função acima, até que encontre uma ou diga que não tem função disponível respondendo um null
+Cada tipo de objecto em funções diferentes.
+
+CLASSES
+
+Syntatic sugar: uma sintaxe feita para facilitar a escrita.
+
+O JS não possui classes nativamente. Todas as classes são objectos e a herança se dá por protótipos.
+Seria meio que um jeito de você criar uma função não nativa do JS
+
+EXERCICIO PRATICO
+
+Usar o this. Para falar onde vai estar o valor para o parâmetro do construtor. ex this.saldo = saldo;
+
+Sempre que for ter um getter e um setter, colocar um _ (underline) entre this. e o parâmetro: ex this._saldo
+
+Sempre que tem um super(puxar dados do objeto pai) precisa ter um extends (para responder quem é o objeto pai). Ex. do script.js
+
+class ContaBancaria {
+    constructor(agencia, numero, tipo) {
+        this.agencia = agencia;
+        this.numero = numero;
+        this.tipo = tipo;
+        this._saldo = 0;
+    }
+    get saldo(){
+        return this._saldo;
+    }
+
+    set saldo (valor) {
+        this.saldo = valor;
+    }
+
+    sacar (valor) {
+        if (valor > this._saldo) {
+            return "Operação negada"
+        }
+        this._saldo = this._saldo - valor;
+
+        return this._saldo;
+    }
+
+    depositar(valor) {
+        this._saldo = this._saldo + valor; 
+
+        return this._saldo;
+    }
+}
+
+class ContaCorrente extends ContaBancaria {
+    constructor(agencia, numero, cartaoCredito) {
+        super(agencia, numero);
+        this.tipo = 'corrente';
+        this._cartaoCredito = cartaoCredito;
+    }
+
+    get cartaoCredito() {
+        return this._cartaoCredito
+    }
+
+    set cartaoCredito(valor) {
+        this._cartaoCredito = valor;
+    }
+}
+
+class ContaPoupanca extends ContaBancaria {
+    constructor(agencia, numero) {
+        super(agencia, numero);
+        this.tipo = 'poupança';
+  
+    }
+}
+
+class ContaUniversitaria extends ContaBancaria {
+    constructor(agencia, numero) {
+        super(agencia, numero);
+        this.tipo = 'universitária';
+    }
+
+    sacar(valor) {
+        if(valor>500) {
+            return "Operação negada"
+        }
+        this._saldo = this._saldo - valor;
+    }
+}
+
+exemplo do html para usar no navegador
+
+<html>
+	<head>
+		<title>Teste OOLS</title>
+	</head>
+	<body>
+		<script src="Script.js"></script>
+	</body>
+</html>
+
+*Para fazer as constantes no navegador posso abrir arquivo no chrome e dar Ctrl+Shift+i
+ 
+*Para criar a conta eu uso:
+const MinhaConta = new ContaCorrente(1, 234, true)
+
+*Para ver o saldo
+MinhaConta.saldo
+
+*Para depositar
+MinhaConta.depositar
+
+etc... 

@@ -1,0 +1,83 @@
+Coleções JavaScript
+MAP
+São estruturas de dados do tipo chave(key) e valor(value).
+
+*como adicionar e deletar parâmetros:
+
+const myMap = new Map ()
+muMap.set("apple", "fruit");*aqui estou adicionando*
+//Map(1) {"apple" => "fruit"}
+myMap.get("apple"); 
+// "fruit"
+myMap.delete("apple")* aqui estou excluindo*
+// true
+MyMap.get("apple")
+// undefined
+
+Diferenças entre Map e Objeto
+No Map podem ter chaves de qualquer tipo, no Objeto só strings
+O Map possuem a propriedade length, o Objeto não
+Maps são mais fáceis de iterar
+Pode usar o Map quando os valores das chaves são desconhecidos
+
+SET
+O Set é uma espécie de array mas com valores únicos (que não se repetem), para consultar o tamanho de um set usa a propriedade "size" ou invés de "length", os sets tem menos propriedades que os arrays
+
+EXERCÍCIOS
+criar um array apenas com os nomes dos administradores, com o map eu tenho a opção de key e value, seria ex. maça(key) = a fruta(value).
+
+function getAdmins(map) {
+    let admins = [];
+    for([key, value] of map) {
+        if(value ==='Admin'){
+            admins.push(key)
+        }
+    }
+    return admins;
+}
+
+const usuarios = new Map ();
+
+usuarios.set('Luiz','admin');
+usuarios.set('Luiz','user');
+usuarios.set('Caio','admin');
+usuarios.set('Paulo','admin');
+
+console.log(getAdmins(usuarios));
+
+*como adicionar, consultar e deletar no Set:
+ 
+const mySet = new Set()
+my.Set.add(1);*aqui estou adicionando*
+mySet.add(5);
+
+mySet.has(1);*aqui estou consultando*
+// true
+
+mySet.has(3);
+// true
+
+mySet.delete(5);*aqui estou excluindo*
+
+
+EXERCÍCIO SET
+Criar um array com base nos números de outro array, porem esse novo array não deve ter números repetidos.
+
+const meuArray = [30, 30, 40, 5, 233, 2049, 3034, 5];*array base*
+
+function valoresUnicos(arr) {
+const mySet = new Set(arr);
+
+return [...mySet];*argumento rest*
+}
+
+console.log(valoresUnicos(meuArray));
+
+Descrição
+Se o último argumento nomeado de uma função tiver prefixo com..., ele irá se tornar um array em que os elementos de 0 (inclusive) até theArgs.length (exclusivo) são disponibilizados pelos argumentos atuais passados à função.
+
+function(a, b, ...theArgs) {
+// ...
+}
+
+No exemplo acima, theArgs irá coletar o terceiro argumento da função (porquê o primeiro é mapeado para a, e o segundo para b) e assim por diante em todos os argumentos consecutivos.

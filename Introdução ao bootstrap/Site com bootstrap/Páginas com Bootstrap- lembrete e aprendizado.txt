@@ -1,0 +1,30 @@
+Construindo páginas para internet com Bootstrap
+Boodstrap é um conjunto de estilo para classes e componentes.
+
+ARQUIVO MIN
+quando baixamos o bootstrap ele possui o mesmo padrão sempre em dois formatos, um todo organizado e o outro sem os espaços, que tem "min" no nome, ele menor que o outro, e o arquivo sendo menor é menos conteúdo para carregar na página e o site fica mais rápido.
+
+container - criar uma margem nas duas pontas, assim você usa apenas o meio da tela, usado dentro de uma section.
+ex
+<section id="quemsomos">
+    <div class="container">
+        
+    </div>
+</section>
+ 
+container-fluid - seria a mesma caixa do container mas agora na tela toda (de um canto a outro).
+ex
+<section id="quemsomos">
+    <div class="container-fluid">
+        
+    </div>
+</section>
+
+ text-center - pode usar para os textos estarem ao centro, mesmo quando a caixa vai nos dois extremos.
+ex
+    <div class="container-fluid quem-somos text-center">
+
+podo usar o padding para criar um tipo de margem interna
+
+Para dividir a tela em partes, lembrando que a soda das partes deve dar 12, o lg significa grande, md médio, e sm pequenos
+<div class="col-lg-4">

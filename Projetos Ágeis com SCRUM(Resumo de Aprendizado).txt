@@ -1,0 +1,52 @@
+Aprendizado - Projetos ágeis com SCRUM
+Scrum é um framework (um modo de trabalhar) de desenvolvimento, seus pilares são transparência, adaptação e inspeção. Ao contrário o WaterFall(o modelo onde se projeta tudo desenvolve tudo e só então o cliente vê o produto) no scrum o cliente irá ver a evolução do produto o mais breve possível, a equipe em geral escreve pouco e conversa muito, sempre trabalhando unida.
+O produto entregue geralmente é um MVP - Minimum Viable Product (mínimo produto viável).
+
+EQUIPE DE SCRUM
+
+*Product Owner (PO) - representa a área de negócios, defini as funcionalidades do software, prioriza as funcionalidades de acordo com o valor do negócio e garante que o time de Dev entenda os itens do Backlog no nível necessário. E sua posição é de agregar o máximo de valor possível para o produto e cliente.
+
+*Scrum Master (SM) - Garante que o time siga o uso correto do Scrum, mas não é o gerente de projeto, ele é uma fonte de conhecimento para prováveis dúvidas do time na questão do Scrum. Ele treinará o time em auto gerenciamento e interdisciplinaridade. Possivelmente o tipo estará um dia pronto para dispensar a presença do Scrum Master.
+
+*Time de Desenvolvedores (DEVS) - Possuem habilidades suficientes para desenvolver, testar, criar, desenhar, etc... tudo que for necessário para entregar o projeto funcionando. Um representante geralmente faz mais de uma habilidade (multidisciplinar).
+
+TERMOS DO SCRUM
+
+*Stack Holder - É a pessoa que espera o projeto, pode ser um cliente direto, um proprietário ou um gerente de projetos por exemplo
+
+*Sprint Planing - (spring traduzido do inglês Arrancada) É uma reunião de planejamento, onde o PO se reuni com a equipe para explicar o que deve ser feito, essa reunião deve durar 8 horas, geralmente dividida em 4 horas para a explicação e resposta de dúvidas do PO, e 4horas sem o PO na sala, onde o time decidirá qual será o meio que usarão para executar o projeto.
+
+*Sprint Backlog - Corresponde aos agrupamentos dos itens prioritários, isto é o que será trabalhado na Sprint Scrum, onde uma meta será traçada, visando o desenvolvimento de algum incremento ao produto. Assim, é criada uma lista de tarefas com base no Product Backlog alinhada com as prioridades já definidas pelo Product Owner, que é o membro do time responsável por direcionar o projeto de acordo com a necessidade do cliente.
+
+Sprint Review - O incremento ao produto geralmente é obtido na Sprint Review, que é uma reunião de revisão que acontece após o final de cada Sprint Scrum com todos os membros do Time Scrum e o cliente, para obter seu feedback.
+
+Sprint Retrospective - Posteriormente, também acontece a Sprint Retrospective com o Scrum Team para repassar o que foi feito de certo e errado na Sprint Scrum, buscando sempre aprender com as falhas e reconhecer as conquistas.
+
+*Daily Meeting - (Traduzindo do inglês reuniões diárias) São reuniões realizadas diariamente, sempre no mesmo horário, onde o time de Devs deve basicamente responder 3 perguntas, o que foi feio ontem, o que está programado para hoje e se existe algum impedimento. Essa reunião precisa ser feita em pé e deve durar no máximo 15 minutos.
+
+*Escopo - O projeto total com cada passo a passo, que é desenvolvido pelo PO.
+
+*Product BackLog - é a meta que devera ser comprida.
+
+*Épico - incremento sem muito detalhes, ajuda a direcionar os caminhos que se deve seguir.
+
+*Estória - Detalhamento dos épicos, um épico normalmente se divide em varias estórias, onde ficam descritos o que deve acontecer e suas regras de negócio.
+
+* Tarefas - São as ações de fato que deveram ser realizadas para completar uma estória.
+
+*Planing Poker - Uma espécie de jogo para ajudar a formar os passos para conclusão do projeto, onde cada um do time dará uma nota para cada tarefa que devera ser feita, levando em conta a dificuldade e o tempo de execução, geralmente tarefas que recebam uma nota maior que 20 deve ser dividida em tarefas menores. Quem der a maior e menor nota deve justificar, pois podem ter pensado em algo que o time não levou em consideração.
+
+4 - Nesse momento o tipo de devs começa a realização do projeto.
+
+5 - Após a finalização do época o PO ira avaliar e dizer se o se os critérios de aceite estão sendo compridos
+
+6 - Sempre que possível o produto deve ser enviado para o cliente testar e avaliar, pode realizar mudanças no projeto e incrementos não previsto.
+
+7 - Esse ciclo se segue até que o projeto esteja completo
+
+Exemplo da bicicleta
+
+Projeto - Bicicleta
+Épico - quadro, rodas, tração, frente.
+Estória - (tração) corrente, pedais, catraca...
+Tarefa - (corrente) juntar os gomos da corrente.

@@ -1,0 +1,159 @@
+Manipulando a D.O.M. com JavaScript
+
+D.O.M significa Document Object Model
+O DOM HTML é um padrão de como acessar e modificar os elementos HTML de uma página.
+Quando se fala de dom, geralmente está se referindo sobre o que representam cada elemento do html de uma página.
+
+DOM vs BOM
+
+BOM significa Browser Object Model
+
+Quando se abre o console no navegador a gente pode acessar a propriedade window(janela).
+BOM é a árvore de elementos que existe dentro da janela.
+
+Dentro do window temos, document(o nosso DOM), history, location, screen, navigator.
+
+FUNÇÕES NO JS:
+
+É possível usar o Js para encontrar um elemento pelo id, pelo name ou pela class.
+
+*Para encontrar pelo id:
+document.getElementById('titulo');
+// <h1 id="titulo">Minha página</h1>*resposta console*
+
+
+*Para encontrar pelo name:
+document.getElementsByTagName('li');
+/*
+[
+<li> Projeto 1</li>,
+<li> Projeto 2</li>,
+<li> Projeto 3</li>,
+]
+*/
+*Lembre-se que a reposta sempre estar dentro de uma array, e para manipula-lo precisa usar o indice*
+
+*Para encontrar pelo name:
+document.getElementsByClassName('textos');
+
+Outra opção para fazer buscar é usando o Query Selector All, com ele é possível procurar combinações específicas, como uma classe e uma tag, ou uma tag e um id.
+ex.
+document.querySelectorAll('.primeira-classe ,li');
+
+Lembre-se, ponto representa class (.).
+Jogo da velha representa id (#).
+Tags não precisa de prefixo.
+Posso usar mais de 2 parâmetros.
+
+Outros métodos:
+
+*Para criar um elemento HTML
+document.createElement(element)
+
+*Para remover um elemento 
+document.removeChild(element)
+
+*Para adicionar um elemento 
+document.appendChild(element)
+
+*Para substituir um elemento 
+document.replaceChild(new, old)
+
+TRABALHANDO COM ESTILOS
+
+Classes Element.classList
+
+O class list seria o chamado para mecher nas class de um elemento. E assim mudar o estilo.
+ex.
+<dic id="meu-elemento" class="classe">
+//aqui eu to só criando um elemento para exemplo*
+</div>
+
+const meuElemento = document.getElementByID("meu-elemento")
+
+meuElemento.classList.add("novo-estilo");*adicina uma class*
+
+meuElemento.classList.remove("classe");*remove uma class*
+
+meuElemento.classList.toggle("dark-mode");
+*O é como se fosse um inverte, se o elemento já tem a class dark-mode ele retira, e se não tem ele coloca.
+
+Acessando Diretamente o CSS de um elemento.
+Também é possível mudar o estilo de elementos sem alterar ou mesmo necessitar existir um arquivo .css, para isso usamos o .style, exemplo:
+
+document.getElementsByTagName("p").style.color = "blue";
+
+("p") = parágrafos
+.color poderia ser borda, fonte, tamanho, etc...
+
+EVENTOS
+
+Evento é qualquer tipo de ação que um usuário realize em uma página. Quando ele interage com algo na página.
+
+Eventos Comuns:
+
+mouseover, mouseout = seria para o texto ou botão mudar quando esta com o mouse encima e como ele sem estar com o mouse encima (seria como rover no css).
+
+click, dbclick = click seria mudar quando há um click no botão por exemplo, e dbclick seria a mesma coisa, mas com duplo click.
+
+change, load = seria para carregar a informação de um lugar e auto preencher outro, ou quando a pessoa preenche o nome dela em um campo, eu deixo o nome fixo no canto, também é possível exibir uma informação assim que a página for carregada.
+
+Para os eventos funcionar precisamos usar o Event listener diretamente no javascript, e assim o console vai ficar de olho no elemento, esperando o evento ser realizado, e então ele age como o configurado.
+Exemplo:
+
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", outraFuncao);*aqui estou add o escutador de evento*
+
+Também é possível adicionar o evento no html
+Exemplo:
+
+<h1 onclick="mudaTexto(this)"Clique aqui!"</h1>*aqui como ele é antes do click
+
+<script>
+function mudaTexto(id) {
+id.innerHTML = "Mudei!";*aqui como vai ficar apos o click
+}
+</script>
+
+o evento é click, mas quando usado direto no html precisa por esse "on" antes, como onchange, on dbclick, etc... 
+
+ATIVIDADES
+Criar o Mode Dark para uma pagina:
+
+//esta função será ativa quando der um clique//
+function changeMode() {
+	changeClasses();
+	changeText();
+}
+//função de ativar o modo dark//
+function changeClasses() {
+	button.classList.toggle(darkModeClass);
+	h1.classList.toggle(darkModeClass);
+	body.classList.toggle(darkModeClass);
+	footer.classList.toggle(darkModeClass);
+}
+//função de mudar o texto//
+function changeText() {
+	const lightMode = "Light Mode";
+	const darkMode = "Dark Mode";
+
+	if(body.classList.contains(darkModeClass)) {
+		button.innerHTML = lightMode;
+		h1.innerHTML = darkMode + " ON";
+		return;
+	} 
+
+	button.innerHTML = darkMode;
+	h1.innerHTML = lightMode + " ON";
+}
+//aqui eu to chamando os elementos que vou mudar no nesse código//
+const darkModeClass = 'dark-mode';
+const button = document.getElementById('mode-selector');
+const h1 = document.getElementById('page-title');
+const body = document.getElementsByTagName('body')[0];
+const footer = document.getElementsByTagName('footer')[0];
+
+
+//aqui é que eu digo o que deve acontecer se eu o evento 'click' acontecer, que é realizar a função changeMode, que ta lá em cima.//
+button.addEventListener('click', changeMode);
+

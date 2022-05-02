@@ -1,0 +1,57 @@
+Aprendizado - Lógica de Programação Essencial
+Linguagem de computação.
+Auto nível - Essas são aquelas mais próximas a linguagem humana;
+
+Baixo Nível - Essas são mais próximas a linguagem de um computador;
+
+E existem dois tipos de linguagens.
+Compiladas - Que necessitam de um compilador, você escreverá o código e ele será formatado em um EXE. Seria como se o compilador traduzisse para o computador o que você esta dizendo.
+
+Interpretadas - São linguagens em que o código fonte é executado por um programa de computador chamado interpretador, que em seguida é executado por um sistema operacional ou processador.
+
+FLOWGORITHM
+Um programa usado para auxiliar na criação e teste de fluxogramas de códigos, podendo assim criar variáveis, constantes, estruturas de repetição, etc... Praticamente tudo que o código teria. E como você pode colocar dados de entrada e rodar o fluxograma, ele também ajuda a testar hipóteses, a avaliar a saída de dados.
+
+PORTUGOL
+Também é um programa para auxiliar na criação de códigos, porém seu design se aproxima mais de um código, eu diria que é um psoudocódigo. Possui praticamente todas as funcionalidades de uma linguagem programação. Ambos são úteis tanto para a testar e aprimorar a lógica, quanto para avaliação de dados de saída.
+
+ VARIÁVEIS DO PORTUGOL
+
+Variáveis numéricas - real ex.3,75
+
+Variáveis numéricas - inteiro ex.10
+
+Variáveis letras - caráter ex. A
+
+Variáveis letras - cadeia ex. Aluno
+
+
+COMANDOS DO PORTUGOL
+
+Escreva --> para escrever na tela
+
+Leia --> abrir uma entrada de dados para o usuário e atribuir a uma variável pré criada.
+
++ - concatenar(juntar) strings e variáveis
+
+Se( --> é para criar uma condicional(como if)
+
+Senão --> Caso seja falso a primeira opção testar outra (como else)
+
+Escolha(palavra) --> Abre uma entrada de dados para o usuário, porém com respostas e reação pré definidas na máquina.
+
+Caso1: --> Comando para adicionar uma resposta pré definida em função ao escolha, pode se usar quantos casos necessários (caso2,caso3...).
+
+Caso contrario --> Uma reação pré definida se o usurário inseriu um dado não informado pelas escolhas.
+
+"\n" --> Quebra de linha.
+
+// --> Usado para adicionar comentários e lembretes no código, que só só aparecerão para os desenvolvedores.
+
+Faca --> para mandar uma ordem para o programa, usado para criar estruturas de repetição.
+
+VETORES
+É uma espécie de lista em um só sentido
+
+MATRIZES
+Seria quase igual aos vetores, porém com linhas na Frente, lembrando uma tabela.

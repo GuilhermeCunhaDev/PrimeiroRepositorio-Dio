@@ -1,0 +1,36 @@
+Aprendizado - Pensamento Computacional
+Nesse curso aprendi o passo a passo para resolução de problemas com o pensamento computacional que é:
+1. Decomposição
+Dividir um grande problema em vários pequenos. Sempre analisar e ver os modos de divisão, e fazer uma síntese, ou seja reunir os elementos e observar se faz sentido.
+ Existem duas estratégias:
+A sequencial onde os problemas seguem uma ordem para serem resolvidos, por exemplo, quando se precisa do resultado de um problema para resolver o seguinte.
+E a paralelo, onde podemos resolver mais de um problema ao mesmo tempo, assim ganhando eficiência e tempo.
+2. Reconhecimento de Padrões
+Procurar estruturas invariantes (coisas que não mudam) e encontrar repetições. Sempre analisando o que tem de igual e diferentes.
+3. Abstração
+Seria pegar algo físico ou concreto e "levar para o campo das ideias" onde eu posso mudar procurar uma regra, que seria a generalização.
+Ex. 1+1=2;   2+2=4;   3+3=6;  ou x+x=y 
+ x+1 + x+1 = y+2 -generalização("sempre funciona")
+
+Na abstração focamos em dados em essenciais e deixamos os não essenciais um pouco de lado, assim facilitando na classificação.
+Ex. Existem vários tipos e formatos de mesas, porém focando em pontos essenciais podemos classificar todas como mesas.
+ A abstração é usada em estruturas de dados, linguagem de programação, comunicação síncrona ou assíncrona, etc...
+
+4. Algoritmos
+São regras usadas para resolver uma tarefa, e podem ser passadas para um computador resolver tarefas e problemas, sempre usando uma sequencia de passos com objetivo definido, executando tarefas específicas em uma sucessão finita de ações.
+
+Passo a passo para construção de um algoritmo:
+1° Compreensão do problema
+2° Definição de dados de entrada
+3° Definir processamento
+4° Definir dados esperados de saída
+5° Utilizar um método de construção
+6° Testes e diagnósticos
+
+Processos de construção de algoritmos.
+
+Narrativa - o mais simples e utilizado, já que usa a linguagem natural para criar um passo a passo, seu ponto forte a não necessidade de depreender de tempo para aprender termos específicos e símbolos, porém seu ponto fraco por usar interpretação pessoal é abrir espaço para conclusões diferente. 
+
+Fluxograma - utilizar de símbolos pré definidos que carregam um significado (como uma linguagem própria), ele é simples mas necessita de um certo tempo para ser aprendido.
+
+Pseudocódigo - É quase que uma mistura da linguagem natural com a escrita de um código, possui geralmente as mesmas regras de um código e não abre espaço para interpretação.

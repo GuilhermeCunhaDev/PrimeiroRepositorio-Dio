@@ -1,0 +1,122 @@
+Debugging e Error Handling
+
+Error do ECMAScript
+São erros mais comuns, onde você pode ter esquecido um ponto e virgula falta algo em seu código, ele é composto por mensagem, nome, linha e callstack
+
+DOMException
+Dom= docucment objet model
+São erros referente da estrutura da sua árvore de elementos dentro de uma página da web, seria por exemplo um valor que não pode ser colocado naquela posição
+
+THROW vs RETURN
+se eu crio um string chamada "string inválida" e peso para o console retornar essa string, ele retornará normalmente "string inválida", mas se eu crio um throw e declaro "string ubváida", e eu invoco essa string, vai dar uma espécie de erro no console, como se eu tivesse adicionado um erro ao sistema.
+
+TRY... CATCH e FINALLY
+
+O try seria para procurar um erro dentro do código, e o catch para manipular aquele erro.
+exemplo usando console.log:
+
+function tryCatchExemplo(string) {
+try {
+verificaPalindromo(string)*código ficticio para exemplo*
+ }
+ catch(e) {
+  console.log(e)*aqui eu peso para ele me contar o erro*
+ }
+}
+tryCatchExemplo(' ');
+string inválida * aqui ele está infomrnado que a string é inválida*
+
+exemplo usando throw:
+
+function tryCatchExemplo(string) {
+try {
+verificaPalindromo(string)*código ficticio para exemplo*
+ }
+ catch(e) {
+  throw e*aqui eu peso para ele me contar o erro*
+ }
+}
+tryCatchExemplo(' ');
+uncaught string inválida * aqui ele está nistrando erro em vermelho e dizendo, string é inválida*
+
+Exemplo com o Finally:
+
+function tryCatchExemplo(string) {
+try {
+verificaPalindromo(string)*código ficticio para exemplo*
+ }
+ catch(e) {
+  throw e *aqui eu peso para ele me contar o erro*
+ }
+finally {
+console.log('A string enviada foi:  ' +  string);
+}
+tryCatchExemplo('ala'); *ala é uma string ficticia para exemplo
+A string enviada foi: ala *esse é a parte do finally, seria uma especie de conclução.
+
+se a string estivesse vazia ele mostraria ela vazia e depois daria o erro que o codigo não rodeou.
+
+COMO CRIAR UM ERRO
+
+Criando o erro:
+
+new Error(message, fileName, lineNumber)
+// todos os parâmetros são opcionais
+const MeuErro = new Error('Mensagem Inválida");
+throw MeuErro;
+
+*O message é o padrão e os outros podem não funcionar em todos navegadores*
+
+como criar um erro com nome:
+ 
+const MeuErro = new Error('Mensagem Inválida');
+MeuErro.name = 'InvalidMessage";
+throw MeuErro
+
+No console posso usar:
+
+MeuErro.name
+// "nome do erro"
+MeuErro.stack
+// "nome do erro: Mensagem Inválida\n (que é o nosso erro) at <annonymous>:3:17" (que é a linha e 3 na coluna 17)
+
+EXERCÍCIOS
+ O objetivo é que a função receba um array  e um número, e retorne ele caso o seu tamanho corresponda ao número enviado como parâmetro na função.
+Caso contrário, um erro será lançado.
+1 - Crie uma finção que recebe um array e um número.
+2 - Realize as seguintes validações.
+*se os parâmetros não forem enviados, lance um erro do tipo ReferenceError.
+*se o array não for do tipo 'object', lance um erro do tipo TypeError.
+*se o número não for do tipo 'number', lance um erro do tipo TypeError.
+*se o tamanho do array for diferente do número enviado como parâmetro, lance um erro do tipo RangeErro.
+3 - Utilize a declaração try...catch
+4 - Filtre as chamadas de catch por cada tipo de erro utilizando o operador Intanceof
+
+function validaArray(arr,num) {
+    try {
+    if(!arr && !num) throw new ReferenceError("Envie os Parâmetros");
+
+    if(typeof arr !== 'object') throw new TypeError("O Array precisa ser do tipo object");
+
+    if(typeof num !== 'number') throw new TypeError("O Array precisa ser do tipo number");
+
+    if(arr.length !== num) throw new RangeError("Tamanho inválido!");
+    return arr;
+} catch (e) {
+    if (e instanceof ReferenceError) {
+        console.log('Este erro é um ReferenceError!');
+        console.log(e.message);
+    } else if (e instanceof TypeError) {
+        console.log('Este erro é um TypeError!');
+        console.log(e.message);
+    } else if (e instanceof RangeError) {
+        console.log('Este erro é um RangeError!');
+        console.log(e.message);
+    } else {
+        console.log('Tipo de erro não esperado:' + e);
+    }
+}
+}
+
+* instanceof  - seria um tipo parecido com o typeof 
+ex:   if (e instanceof ReferenceError) {
